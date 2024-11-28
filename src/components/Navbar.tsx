@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, BarChart2 } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import Logo from './assets/XpertScale_Marketing.png';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,7 +17,7 @@ export default function Navbar() {
         }
         return false;
       });
-      
+
       if (currentSection) {
         setActiveSection(currentSection);
       }
@@ -29,10 +30,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: '#home', label: 'Start' },
-    { href: '#services', label: 'Leistungen' },
-    { href: '#about', label: 'Über uns' },
-    { href: '#contact', label: 'Kontakt' }
+    { href: 'Start', label: 'Start' },
+    { href: 'Leistungen', label: 'Leistungen' },
+    { href: 'Über uns', label: 'Über uns' },
+    { href: 'Kontakt', label: 'Kontakt' },
   ];
 
   const getLinkClasses = (href: string) => {
@@ -50,8 +51,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img src="images/XpertScale_Marketing.png" alt="images/XpertScale_Marketing.png" width={100} height={100}/>        
-                 </div>
+              <img src={Logo} alt="XpertScale Marketing Logo" width={100} height={100} />
+            </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 {navLinks.map(({ href, label }) => (
