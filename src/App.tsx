@@ -8,9 +8,9 @@ import CookieBanner from './components/CookieBanner';
 
 export default function App() {
   return (
-    <div className="bg-black min-h-screen flex flex-col">
+    <div className="bg-black min-h-screen">
       <Navbar />
-      <main className="flex-grow">
+      <main>
         <Hero />
         <Services />
         <About />
@@ -25,7 +25,7 @@ export default function App() {
         </div>
       </footer>
 
-      {/* <CookieBanner /> */}
+      <CookieBanner />
     </div>
   );
 }
