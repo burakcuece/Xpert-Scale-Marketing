@@ -50,7 +50,7 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img src="images/XpertScale_Marketing.png" alt="Logo Xpert Scale Marketing" width={80} height={80} />
+              <img src="images/XpertScale_Marketing.png" alt="Logo Xpert Scale Marketing" width={50} height={50} />
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
