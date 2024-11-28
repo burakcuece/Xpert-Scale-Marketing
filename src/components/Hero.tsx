@@ -1,9 +1,8 @@
 import React from 'react';
-import { TrendingUp, Target, Zap } from 'lucide-react';
+import { Target, Zap } from 'react-feather';
 
 export default function Hero() {
-  const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
+  const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
@@ -11,29 +10,17 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient relative overflow-hidden">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_120%,rgba(34,197,94,0.15),rgba(0,0,0,0))]" />
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+    <section id="home" className="relative bg-black text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="text-center">
-          <h1 className="text-4xl tracking-tight font-extrabold text-white sm:text-5xl md:text-6xl">
-            <span className="block">Transformieren Sie Ihr Business mit</span>
-            <span className="block text-gradient">Xpert Scale Marketing</span>
+          <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">
+            Willkommen bei Xpert Scale Marketing
           </h1>
-          
-          <p className="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl">
-            Steigern Sie Ihre Markenleistung mit datengesteuerten Marketingstrategien, maßgeschneidert für Ihren Erfolg.
+          <p className="mt-4 text-lg leading-6 text-gray-300">
+            Wir helfen Ihnen, Ihr Geschäft auf die nächste Stufe zu heben.
           </p>
-
-          <div className="mt-10 flex justify-center gap-8">
-            <div className="animate-float delay-0">
-              <div className="p-4 bg-black/50 backdrop-blur-lg rounded-xl border border-green-500/20 shadow-lg shadow-green-500/10">
-                <TrendingUp className="h-8 w-8 text-green-500 mx-auto" />
-                <p className="mt-2 text-sm text-gray-300">Performance Marketing</p>
-              </div>
-            </div>
-            
-            <div className="animate-float delay-300">
+          <div className="mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="animate-float">
               <div className="p-4 bg-black/50 backdrop-blur-lg rounded-xl border border-green-500/20 shadow-lg shadow-green-500/10">
                 <Target className="h-8 w-8 text-green-500 mx-auto" />
                 <p className="mt-2 text-sm text-gray-300">Gezielte Kampagnen</p>
