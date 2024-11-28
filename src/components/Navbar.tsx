@@ -54,7 +54,7 @@ export default function Navbar() {
                 src="/images/XpertScale_Marketing.png"
                 alt="Xpert Scale Marketing Logo" width="150" height="40"
                 onError={(e) => {
-                e.currentTarget.src = "https://via.placeholder.com/150";
+                e.currentTarget.src = "https://via.placeholder.com/100";
                  }}/>            
                  </div>
             <div className="hidden md:block">
