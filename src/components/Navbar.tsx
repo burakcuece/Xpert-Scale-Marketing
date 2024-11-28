@@ -23,7 +23,7 @@ export default function Navbar() {
     };
 
     window.addEventListener('scroll', handleScroll);
-    handleScroll(); // Initial check
+    handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -47,10 +47,10 @@ export default function Navbar() {
   return (
     <nav className="fixed w-full z-50 bg-black/90 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 sm:h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <img src="images/XpertScale_Marketing.png" alt="Logo Xpert Scale Marketing" width={100} height={100} />
+              <BarChart2 className="h-8 w-8 text-green-500" />
             </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
@@ -59,6 +59,10 @@ export default function Navbar() {
                     key={href}
                     href={href}
                     className={getLinkClasses(href)}
+                    onClick={() => {
+                      const element = document.querySelector(href);
+                      element?.scrollIntoView({ behavior: 'smooth' });
+                    }}
                   >
                     {label}
                   </a>
@@ -70,29 +74,34 @@ export default function Navbar() {
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"
+              aria-expanded="false"
             >
+              <span className="sr-only">Menü öffnen</span>
               {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
       </div>
 
-      {isOpen && (
-        <div className="md:hidden">
-          <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            {navLinks.map(({ href, label }) => (
-              <a
-                key={href}
-                href={href}
-                className={`block ${getLinkClasses(href)}`}
-                onClick={() => setIsOpen(false)}
-              >
-                {label}
-              </a>
-            ))}
-          </div>
+      {/* Mobile menu */}
+      <div className={`md:hidden ${isOpen ? 'block' : 'hidden'}`}>
+        <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+          {navLinks.map(({ href, label }) => (
+            <a
+              key={href}
+              href={href}
+              className={`block ${getLinkClasses(href)}`}
+              onClick={() => {
+                setIsOpen(false);
+                const element = document.querySelector(href);
+                element?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              {label}
+            </a>
+          ))}
         </div>
-      )}
+      </div>
     </nav>
   );
 }
