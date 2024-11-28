@@ -52,7 +52,7 @@ export default function Navbar() {
             <div className="flex-shrink-0">
               <img
                 src="/images/XpertScale_Marketing.png"
-                alt="Xpert Scale Marketing Logo"
+                alt="Xpert Scale Marketing Logo" width="150" height="40"
                 onError={(e) => {
                 e.currentTarget.src = "https://via.placeholder.com/150";
                  }}/>            
