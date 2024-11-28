@@ -22,7 +22,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="text-lg font-medium text-white">Telefon</h3>
-                <p className="mt-1 text-gray-400">+49 (030) 123-4567</p>
+                <p className="mt-1 text-gray-400">+49 163 6753600</p>
               </div>
             </div>
 
@@ -32,7 +32,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="text-lg font-medium text-white">E-Mail</h3>
-                <p className="mt-1 text-gray-400">kontakt@xpertscale.de</p>
+                <p className="mt-1 text-gray-400">info@xpertscale.de</p>
               </div>
             </div>
 
@@ -42,7 +42,7 @@ export default function Contact() {
               </div>
               <div>
                 <h3 className="text-lg font-medium text-white">Standort</h3>
-                <p className="mt-1 text-gray-400">Berlin, Deutschland</p>
+                <p className="mt-1 text-gray-400">Recklinghausen, Deutschland</p>
               </div>
             </div>
           </div>
