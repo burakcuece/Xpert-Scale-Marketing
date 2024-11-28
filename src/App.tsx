@@ -4,12 +4,13 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
+import CookieBanner from './components/CookieBanner';
 
 export default function App() {
   return (
-    <div className="bg-black min-h-screen">
+    <div className="bg-black min-h-screen flex flex-col">
       <Navbar />
-      <main>
+      <main className="flex-grow">
         <Hero />
         <Services />
         <About />
@@ -23,6 +24,8 @@ export default function App() {
           </p>
         </div>
       </footer>
+
+      {/* <CookieBanner /> */}
     </div>
   );
 }
