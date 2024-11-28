@@ -2,8 +2,7 @@ import React from 'react';
 import { TrendingUp, Target, Zap } from 'lucide-react';
 
 export default function Hero() {
-  const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
+  const scrollToContact = () => {
     const contactSection = document.getElementById('contact');
     if (contactSection) {
       contactSection.scrollIntoView({ behavior: 'smooth' });
