@@ -29,10 +29,10 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { href: '#home', label: 'Start' },
-    { href: '#services', label: 'Leistungen' },
-    { href: '#about', label: 'Über uns' },
-    { href: '#contact', label: 'Kontakt' }
+    { href: 'startseite', label: 'Start' },
+    { href: 'leistungen', label: 'Leistungen' },
+    { href: 'über-uns', label: 'Über uns' },
+    { href: 'kontakt', label: 'Kontakt' }
   ];
 
   const getLinkClasses = (href: string) => {
