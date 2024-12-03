@@ -17,8 +17,8 @@ export default function Hero() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
         <div className="text-center">
           <h1 className="text-3xl tracking-tight font-extrabold text-white sm:text-4xl md:text-5xl lg:text-6xl px-4">
-            <span className="block">Transformieren Sie Ihr Business mit</span>
-            <span className="block text-gradient mt-2">Xpert Scale Marketing</span>
+            <span className="block">Digitales Marketing auf</span>
+            <span className="block text-gradient mt-2">höchstem Niveau</span>
           </h1>
           
           <p className="mt-3 max-w-md mx-auto text-base text-gray-300 sm:text-lg md:mt-5 md:text-xl md:max-w-3xl px-4">
