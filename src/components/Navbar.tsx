@@ -16,7 +16,7 @@ export default function Navbar() {
         }
         return false;
       });
-
+      
       if (currentSection) {
         setActiveSection(currentSection);
       }
@@ -42,10 +42,11 @@ export default function Navbar() {
 
   const getLinkClasses = (href: string) => {
     const section = href.replace('#', '');
-    return `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${activeSection === section
-      ? 'text-green-500 bg-green-500/10'
-      : 'text-gray-300 hover:text-green-500'
-      }`;
+    return `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+      activeSection === section
+        ? 'text-green-500 bg-green-500/10'
+        : 'text-gray-300 hover:text-green-500'
+    }`;
   };
 
   return (
@@ -53,13 +54,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 sm:h-20">
           <div className="flex items-center">
-            <a
-              href="#home"
+            <a 
+              href="#home" 
               onClick={scrollToTop}
               className="flex-shrink-0 group transition-transform duration-200 hover:scale-110"
               aria-label="Zum Seitenanfang"
             >
-              <img src="images/XpertScale_Marketing.png" alt="XpertScale Logo" height={150} width={150} />
+              <BarChart2 className="h-8 w-8 text-green-500 transition-colors duration-200 group-hover:text-green-400" />
             </a>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
