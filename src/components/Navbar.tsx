@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, BarChart2, Images } from 'lucide-react';
-import logo from './XpertScale_Marketing.png'; // Just import it
+import { Menu, X, BarChart2 } from 'lucide-react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
-
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,7 +16,7 @@ export default function Navbar() {
         }
         return false;
       });
-
+      
       if (currentSection) {
         setActiveSection(currentSection);
       }
@@ -39,10 +37,11 @@ export default function Navbar() {
 
   const getLinkClasses = (href: string) => {
     const section = href.replace('#', '');
-    return `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${activeSection === section
-      ? 'text-green-500 bg-green-500/10'
-      : 'text-gray-300 hover:text-green-500'
-      }`;
+    return `px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200 ${
+      activeSection === section
+        ? 'text-green-500 bg-green-500/10'
+        : 'text-gray-300 hover:text-green-500'
+    }`;
   };
 
   return (
@@ -51,17 +50,8 @@ export default function Navbar() {
         <div className="flex items-center justify-between h-16 sm:h-20">
           <div className="flex items-center">
             <div className="flex-shrink-0">
-
-            console.log(./images/XpertScale_Marketing.png);
-
-
-              function Header() {
-                return (
-                  <img src={logo} alt="Xpert Scale Marketing" className="h-8 sm:h-10" />
-                );
-              }
-              }
-            </div>
+              <img src="images/XpertScale_Marketing.png" alt="Xpert Scale Marketing Logo" width={100} height={100}/>        
+                 </div>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
                 {navLinks.map(({ href, label }) => (
