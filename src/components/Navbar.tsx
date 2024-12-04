@@ -60,7 +60,7 @@ export default function Navbar() {
               className="flex-shrink-0 group transition-transform duration-200 hover:scale-110"
               aria-label="Zum Seitenanfang"
             >
-              <BarChart2 className="h-8 w-8 text-green-500 transition-colors duration-200 group-hover:text-green-400" />
+              <img src="images/XpertScale_Marketing.png" alt="Xpert Scale Marketing Logo" />
             </a>
             <div className="hidden md:block">
               <div className="ml-10 flex items-baseline space-x-4">
